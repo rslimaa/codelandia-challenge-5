@@ -6,7 +6,7 @@
 
 body {
   background: linear-gradient(to bottom right, #628e75, #1a4855) no-repeat;
-  height: 100%;
+  height: 100vh;
 }
 
 .container {
@@ -31,7 +31,7 @@ body {
   list-style: none;
 }
 
-.content > h2 {
+h2 {
   font-family: "Poppins";
   font-weight: 700, bold;
   font-size: 18px;
@@ -42,6 +42,7 @@ body {
 .content img {
   width: 100%;
   height: auto;
+  max-width: 500px;
 }
 
 h1 {
@@ -57,36 +58,140 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 25px;
-  margin-bottom: 58px;
+  margin-bottom: 20px;
 }
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+ }
 
 .watch {
   display: flex;
   gap: 14px;
   padding: 8px 33px 8px 36px;
-  margin-bottom: 70px;
   -webkit-transform: skew(20deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(20deg);
 }
 
-.forma {
+.watch-trailer {
+  gap: 14px;
+  padding: 8px 33px 8px 36px;
+  -webkit-transform: skew(20deg);
+  -moz-transform: skew(20deg);
+  -o-transform: skew(20deg);
+}
+
+.forma,
+.trailer {
   -webkit-transform: skew(-20deg);
   -moz-transform: skew(-20deg);
   -o-transform: skew(-20deg);
   background-color: #658e76;
   width: max-content;
   margin-left: 8px;
+  border: solid 2px #658e76;
+  margin-bottom: 50px;
+}
+
+.forma:hover {
+  background-color: transparent;
+  border: solid 2px #658e76;
+}
+
+.trailer:hover{ 
+  background-color: #658e76;
+  border: solid 2px #658e76;
+}
+
+.trailer {
+  display: none;
+  background-color: transparent;
+  border: solid 2px #658e76;
 }
 
 .watch img {
   width: 18px;
 }
 
-.watch > h2 {
-  font-family: "poppins";
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 29px;
-  text-transform: uppercase;
+
+@media (min-width: 768px){
+
+  .container-main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .top{
+    margin-bottom: 150px;
+    }
 }
+
+@media (min-width: 920px) {
+  h2 {
+    margin-bottom: 14px;
+  }
+
+  h1 {
+      margin-bottom: 20px;
+  }
+
+  .content img {
+    max-width: 600px;
+  }
+
+  .buttons {
+    display: flex;
+  }
+
+  .watch-trailer > h2,
+  .trailer {
+    display: block;
+  }
+
+  .container {
+    padding-left: 25px;
+    padding-top: 14px;
+    padding-right: 25px;
+  }
+
+  h2 {
+    font: 20px;
+    line-height: 30px;
+  }
+
+  h1 {
+    font-size: 68px;
+    line-height: 74px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    padding-left: 50px;
+    padding-top: 25px;
+    padding-right: 50px;
+  }
+
+  p{
+    margin-bottom: 50px;
+    }
+
+  @media (min-width: 1150px) {
+    .container {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+  
