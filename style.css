@@ -4,8 +4,9 @@
   color: #f9f9f9;
 }
 
-html {
-  background: linear-gradient(to bottom right, #628e75, #1a4855);
+body {
+  background: linear-gradient(to bottom right, #628e75, #1a4855) no-repeat;
+  height: 100%;
 }
 
 .container {
@@ -39,7 +40,8 @@ html {
 }
 
 .content img {
-  width: 360px;
+  width: 100%;
+  height: auto;
 }
 
 h1 {
@@ -59,12 +61,22 @@ p {
 }
 
 .watch {
-  background-color: #658e76;
   display: flex;
   gap: 14px;
   padding: 8px 33px 8px 36px;
-  width: max-content;
   margin-bottom: 70px;
+  -webkit-transform: skew(20deg);
+  -moz-transform: skew(20deg);
+  -o-transform: skew(20deg);
+}
+
+.forma {
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+  background-color: #658e76;
+  width: max-content;
+  margin-left: 8px;
 }
 
 .watch img {
